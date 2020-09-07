@@ -17,33 +17,28 @@ public class AuthInfo {
     public final String status;
 
 
-    private static final Faker faker = new Faker(new Locale("en"));
 
-    private static String generateLogin() {
-        return faker.name().username();
-    }
 
-    private static String generatePassword() {
-        return faker.internet().password();
-    }
-
-    protected AuthInfo(String status) {
-        this.login = generateLogin();
-        this.password = generatePassword();
+    protected AuthInfo(String login, String password, String status) {
+        this.login = login;
+        this.password = password;
         this.status = status;
     }
 
-
-
     public String getLogin() {
+
         return login;
     }
 
     public String getPassword() {
+
         return password;
     }
 
     public String getStatus() {
+
         return status;
     }
+
+
 }
