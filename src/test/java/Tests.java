@@ -28,6 +28,7 @@ public class Tests {
         $("[data-test-id=login] input").sendKeys(person.login);
         $("[data-test-id=password] input").sendKeys(person.password);
         $("button[data-test-id=action-login]").click();
+        $("[id=root]").shouldHave(text("Личный кабинет".trim()));
     }
 
     @Test
